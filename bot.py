@@ -3,7 +3,7 @@ import discord
 import responses
 import random
 
-TOKEN = 'MTE3MzEzNDAyMjc1OTY5NDM3Ng.GX9_Go.7rTOXo7D7ukvbsYzEI2J5egpr_J--Jyse2AXPI'
+TOKEN = *
 CHANNEL = 1173149464417022022
 OWNER = 235236034101772289
 
@@ -47,7 +47,7 @@ async def me(ctx):
     embed.set_thumbnail(url = user.avatar.url)
     embed.add_field(name = 'Joined Server', value = ctx.author.joined_at.strftime('%Y-%m-%d %H:%M:%S'), inline = False)
 
-    # no way to count total messages w/o blowing up pc GG
+    # no way to count total messages w/o blowing up pc 
     # if user_id in user_join_timestamps:
 
     #     total_messages = 0
@@ -102,18 +102,11 @@ async def on_message(message):
             await message.author.send("I already warned you once, don't let it happen again.")
 
 
-    if 'chid' in message.content.lower():
-        await message.channel.send("<:africa:1173880419117187102>")
-
     if 'ethan' in message.content.lower():
         await message.channel.send("<:squadR:770517495500898314>")
 
     if 'james' in message.content.lower():
         await message.channel.send("<:behemoth:1173883269901733929>")
-
-    # if message.author != bot.user:
-    #     if user_id not in user_join_timestamps:
-    #         user_join_timestamps[user_id] = message.author.joined_at
 
     await bot.process_commands(message)
 
